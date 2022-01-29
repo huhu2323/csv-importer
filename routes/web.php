@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CelebrityController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [CelebrityController::class, 'form'])->name('form');
+
+Route::post('/', [CelebrityController::class, 'store'])->name('store');

@@ -8,4 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Celebrity extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'year',
+        'rank',
+        'recipient',
+        'country',
+        'career',
+        'tied',
+        'title'
+    ];
 }
